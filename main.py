@@ -52,7 +52,7 @@ class WindowClass(QMainWindow, form_class) :
         except:
             self.result.setPlainText("잘못된 값이 입력되었습니다.")
         else:
-            if(p > 100 * (10 ** 10) or (p <= 0 and p != 156) or d <= 0 or want <= 0 or d < want):
+            if(p > 100 * (10 ** 10) or d <= 0 or want <= 0 or d < want):
                 self.result.setPlainText("잘못된 값이 입력되었습니다.")
             else:
                 t = 0
@@ -111,9 +111,6 @@ class WindowClass(QMainWindow, form_class) :
                 # self.result.setPlainText(p1 + "%")
                 self.result.setPlainText(str(want) + "회 이상 나올 확률 : " + str(per) + "%")
                 self.result.append("\n99%의 확률로 1회 이상 당첨 : " + str(format(bww, ',')))
-
-            if (p == (156 * (10 ** 10)) and d == 554 and want == 918): # 제작자
-                self.result.setPlainText("제작자 : PONTE\n\n버   전 : 1.1")
 
 if __name__ == "__main__" :
     app = QApplication(sys.argv)
