@@ -47,7 +47,6 @@ class WindowClass(QMainWindow, form_class) :
 
         try:
             p = float(self.txt_pro.toPlainText()) * 0.01
-            print(p)
             d = int(self.txt_do.toPlainText())
             want = int(self.txt_want.toPlainText())
         except:
